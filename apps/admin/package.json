@@ -1,0 +1,60 @@
+{
+  "name": "@petzilla/admin",
+  "version": "1.0.0",
+  "description": "Enterprise-level backend framework with Node.js + TypeScript + Koa3 + MySQL + Redis",
+  "keywords": [
+    "koa",
+    "typescript",
+    "mysql",
+    "redis",
+    "enterprise"
+  ],
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "build": "rimraf dist && tsc",
+    "start": "cross-env NODE_ENV=production node dist/app.js",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "main": "main.ts",
+  "imports": {
+    "#app": "./src/app.ts",
+    "#/*": "./src/*"
+  },
+  "dependencies": {
+    "@koa/cors": "catalog:",
+    "@koa/router": "catalog:",
+    "chalk": "catalog:",
+    "dotenv": "catalog:",
+    "ioredis": "catalog:",
+    "koa": "catalog:",
+    "koa-body": "catalog:",
+    "koa-helmet": "catalog:",
+    "koa-json": "catalog:",
+    "koa-logger": "catalog:",
+    "log4js": "catalog:",
+    "mysql2": "catalog:"
+  },
+  "devDependencies": {
+    "@types/koa": "catalog:",
+    "@types/koa-json": "catalog:",
+    "@types/koa-logger": "catalog:",
+    "@types/koa__cors": "catalog:",
+    "@types/koa__router": "catalog:",
+    "@types/node": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "cross-env": "catalog:",
+    "eslint": "catalog:",
+    "nodemon": "catalog:",
+    "prettier": "catalog:",
+    "rimraf": "catalog:",
+    "ts-node": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
+  }
+}
