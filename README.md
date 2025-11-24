@@ -1,157 +1,292 @@
-<div align="center">
-  <a href="https://github.com/anncwb/vue-vben-admin">
-    <img alt="VbenAdmin Logo" width="215" src="https://unpkg.com/@vbenjs/static-source@0.1.7/source/logo-v1.webp">
-  </a>
-  <br>
-  <br>
-
-[![license](https://img.shields.io/github/license/anncwb/vue-vben-admin.svg)](LICENSE)
-
-  <h1>Vue Vben Admin</h1>
-</div>
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=vbenjs_vue-vben-admin&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=vbenjs_vue-vben-admin) [![codeql](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/codeql.yml) [![build](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/build.yml) [![ci](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/ci.yml) [![deploy](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml/badge.svg)](https://github.com/vbenjs/vue-vben-admin/actions/workflows/deploy.yml)
-
-**English** | [中文](./README.zh-CN.md) | [日本語](./README.ja-JP.md)
-
-## Introduction
-
-Vue Vben Admin is a free and open source middle and back-end template. Using the latest `vue3`, `vite`, `TypeScript` and other mainstream technology development, the out-of-the-box middle and back-end front-end solutions can also be used for learning reference.
-
-## Upgrade Notice
-
-This is the latest version, 5.0, and it is not compatible with previous versions. If you are starting a new project, it is recommended to use the latest version. If you wish to view the old version, please use the [v2 branch](https://github.com/vbenjs/vue-vben-admin/tree/v2).
-
-## Features
-
-- **Latest Technology Stack**: Developed with cutting-edge front-end technologies like Vue 3 and Vite
-- **TypeScript**: A language for application-scale JavaScript
-- **Themes**: Multiple theme colors available with customizable options
-- **Internationalization**: Comprehensive built-in internationalization support
-- **Permissions**: Built-in solution for dynamic route-based permission generation
-
-## Preview
-
-- [Vben Admin](https://vben.pro/) - Full version Chinese site
-
-Test Account: vben/123456
+# Petzilla
 
 <div align="center">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview1.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview2.png">
-  <img alt="VbenAdmin Logo" width="100%" src="https://anncwb.github.io/anncwb/images/preview3.png">
+
+一个基于 Vue 3 + Vben Admin + Koa 的全栈企业级应用框架
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D20.12.0-brightgreen.svg)](https://nodejs.org)
+[![pnpm](https://img.shields.io/badge/pnpm-%3E%3D10.0.0-blue.svg)](https://pnpm.io)
+
 </div>
 
-### Use Gitpod
+## ✨ 特性
 
-Open the project in Gitpod (free online dev environment for GitHub) and start coding immediately.
+- 🚀 **Monorepo 架构** - 使用 pnpm workspace + Turbo 构建工具
+- 🎨 **前端技术栈** - Vue 3 + Vite + TypeScript + Naive UI
+- 🔥 **后端技术栈** - Node.js + Koa + TypeScript + MySQL + Redis
+- 📦 **代码规范** - ESLint + Prettier + Lefthook
+- 🔐 **权限管理** - 完善的 RBAC 权限体系
+- 📝 **日志系统** - Log4js 多级别日志记录
+- 🌍 **国际化** - 内置多语言支持
+- 🎯 **TypeScript** - 全面的类型安全
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/vbenjs/vue-vben-admin)
+## 📦 项目结构
 
-## Documentation
-
-[Document](https://doc.vben.pro/)
-
-## Install and Use
-
-1. Get the project code
-
-```bash
-git clone https://github.com/vbenjs/vue-vben-admin.git
+```
+petzilla/
+├── apps/
+│   ├── admin/              # 后端服务（Koa + TypeScript）
+│   │   ├── src/
+│   │   │   ├── routes/     # 路由模块（支持多层目录）
+│   │   │   ├── middlewares/ # 中间件（日志、错误处理、CORS）
+│   │   │   ├── utils/      # 工具函数
+│   │   │   └── app.ts      # 应用入口
+│   │   └── main.ts         # 启动文件
+│   ├── web-native/         # 前端应用（Vue 3 + Naive UI）
+│   └── wen-portal/         # 门户应用
+├── packages/               # 共享包
+│   └── @core/              # 核心包
+├── internal/               # 内部工具包
+│   ├── vite-config/        # Vite 配置
+│   ├── lint-configs/       # Lint 配置
+│   └── tailwind-config/    # Tailwind 配置
+└── scripts/                # 脚本工具
 ```
 
-2. Install dependencies
+## 🛠️ 技术栈
+
+### 前端
+
+- **框架**: Vue 3
+- **构建工具**: Vite
+- **UI 框架**: Naive UI
+- **状态管理**: Pinia
+- **路由**: Vue Router
+- **HTTP 客户端**: @vben/request
+- **CSS**: TailwindCSS
+
+### 后端
+
+- **框架**: Koa 3
+- **语言**: TypeScript (ESM)
+- **数据库**: MySQL 8.0+
+- **缓存**: Redis
+- **日志**: Log4js
+- **API 文档**: 待集成
+
+## 📋 环境要求
+
+- **Node.js**: >= 20.12.0
+- **pnpm**: >= 10.0.0
+- **MySQL**: >= 8.0
+- **Redis**: >= 5.0
+
+## 🚀 快速开始
+
+### 1. 克隆项目
 
 ```bash
-cd vue-vben-admin
-npm i -g corepack
+git clone <repository-url>
+cd petzilla
+```
+
+### 2. 安装依赖
+
+```bash
 pnpm install
 ```
 
-3. Run
+### 3. 配置环境变量
 
 ```bash
+# 复制后端环境变量模板
+cp apps/admin/.env.example apps/admin/.env
+
+# 复制前端环境变量模板
+cp apps/web-native/.env.example apps/web-native/.env
+```
+
+修改 `apps/admin/.env` 配置数据库连接信息：
+
+```env
+# 数据库配置
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=petzilla
+
+# Redis 配置
+REDIS_HOST=localhost
+REDIS_PORT=6379
+
+# 服务端口
+PORT=3030
+```
+
+### 4. 启动开发服务器
+
+```bash
+# 启动所有服务（交互式选择）
 pnpm dev
+
+# 或分别启动
+
+# 启动后端服务
+pnpm --filter @petzilla/admin dev
+
+# 启动前端应用
+pnpm --filter @vben/web-naive dev
 ```
 
-4. Build
+### 5. 访问应用
+
+- 前端应用: http://localhost:5555
+- 后端 API: http://localhost:3030
+
+## 📝 开发指南
+
+### 后端路由开发
+
+支持多层目录结构，自动扫描注册路由：
+
+```
+src/routes/core/
+├── admin/v1/
+│   └── user.route.ts    → /admin/v1/user
+├── api/v1/
+│   └── auth.route.ts    → /api/v1/auth
+```
+
+**路由文件示例** (`user.route.ts`):
+
+```typescript
+import type { RouteHandler } from '#/routes/types';
+
+const userRoute: RouteHandler = (router) => {
+  router.get('/info', async (ctx) => {
+    ctx.body = {
+      code: 0,
+      message: 'Success',
+      data: { user: 'Admin User' },
+    };
+  });
+
+  return router;
+};
+
+export default userRoute;
+```
+
+### 日志系统
+
+三种日志级别，自动记录请求信息：
+
+```
+[2025-11-24 18:19:49] [INFO] default - → GET /admin/v1/user/info | IP: 127.0.0.1
+[2025-11-24 18:19:49] [INFO] default - ← GET /admin/v1/user/info 200 2ms
+[2025-11-24 18:19:49] [INFO] access - {"timestamp":"...","method":"GET",...}
+```
+
+日志文件位置：
+- `logs/app.log` - 应用日志（保留 7 天）
+- `logs/error.log` - 错误日志（保留 30 天）
+- `logs/access.log` - 访问日志（保留 7 天）
+
+### 中间件
+
+- **requestLogger** - 请求日志记录
+- **errorHandler** - 统一错误处理
+- **allowCors** - CORS 跨域支持
+- **koa-body** - 请求体解析
+- **koa-helmet** - 安全头设置
+
+## 🔧 常用命令
+
+| 命令 | 说明 |
+|------|------|
+| `pnpm dev` | 启动开发服务器（交互式选择） |
+| `pnpm build` | 构建所有项目 |
+| `pnpm build:naive` | 只构建 web-naive |
+| `pnpm lint` | 代码检查 |
+| `pnpm format` | 代码格式化 |
+| `pnpm check` | 全面检查（依赖、类型、拼写） |
+| `pnpm clean` | 清理构建产物 |
+| `pnpm reinstall` | 完全重装依赖 |
+| `pnpm commit` | 交互式提交（规范化 commit） |
+| `pnpm test:unit` | 运行单元测试 |
+| `pnpm test:e2e` | 运行 E2E 测试 |
+
+## 📖 API 文档
+
+启动后端服务后访问：
+- Swagger 文档: http://localhost:3030/docs (待实现)
+
+## 🤝 参与贡献
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交改动 (`pnpm commit`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 提交 Pull Request
+
+### Commit 规范
+
+使用 [Conventional Commits](https://www.conventionalcommits.org/) 规范：
 
 ```bash
-pnpm build
+pnpm commit
 ```
 
-## Change Log
+类型说明：
+- `feat`: 新功能
+- `fix`: 修复 Bug
+- `docs`: 文档更新
+- `style`: 代码格式调整
+- `refactor`: 代码重构
+- `perf`: 性能优化
+- `test`: 测试相关
+- `chore`: 构建/工具链更新
 
-[CHANGELOG](https://github.com/vbenjs/vue-vben-admin/releases)
+## 🔒 环境变量
 
-## How to Contribute
+### 后端 (apps/admin/.env)
 
-You are very welcome to join! [Raise an issue](https://github.com/anncwb/vue-vben-admin/issues/new/choose) or submit a Pull Request.
+```env
+NODE_ENV=development
+PORT=3030
 
-**Pull Request Process:**
+# 数据库
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=petzilla
 
-1. Fork the code
-2. Create your branch: `git checkout -b feat/xxxx`
-3. Submit your changes: `git commit -am 'feat(function): add xxxxx'`
-4. Push your branch: `git push origin feat/xxxx`
-5. Submit `pull request`
+# Redis
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
 
-## Git Contribution Submission Specification
+# JWT
+JWT_SECRET=your-secret-key
+JWT_EXPIRES_IN=7d
 
-Reference [vue](https://github.com/vuejs/vue/blob/dev/.github/COMMIT_CONVENTION.md) specification ([Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular))
+# 日志级别
+LOG_LEVEL=info
+```
 
-- `feat` Add new features
-- `fix` Fix the problem/BUG
-- `style` The code style is related and does not affect the running result
-- `perf` Optimization/performance improvement
-- `refactor` Refactor
-- `revert` Undo edit
-- `test` Test related
-- `docs` Documentation/notes
-- `chore` Dependency update/scaffolding configuration modification etc.
-- `ci` Continuous integration
-- `types` Type definition file changes
+### 前端 (apps/web-native/.env.development)
 
-## Browser Support
+```env
+VITE_APP_TITLE=Petzilla Admin
+VITE_API_URL=http://localhost:3030
+VITE_UPLOAD_URL=http://localhost:3030/upload
+```
 
-The `Chrome 80+` browser is recommended for local development
+## 📄 许可证
 
-Support modern browsers, not IE
+[MIT](LICENSE) © Petzilla
 
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| :-: | :-: | :-: | :-: |
-| last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+## 🙏 致谢
 
-## Maintainer
+- [Vue Vben Admin](https://github.com/vbenjs/vue-vben-admin) - 前端框架基础
+- [Koa](https://koajs.com/) - 后端框架
+- [Naive UI](https://www.naiveui.com/) - UI 组件库
 
-[@Vben](https://github.com/anncwb)
+---
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=vbenjs/vue-vben-admin&type=Date)](https://star-history.com/#vbenjs/vue-vben-admin&Date)
-
-## Donate
-
-If you think this project is helpful to you, you can help the author buy a cup of coffee to show your support!
-
-![donate](https://unpkg.com/@vbenjs/static-source@0.1.7/source/sponsor.png)
-
-<a style="display: block;width: 100px;height: 50px;line-height: 50px; color: #fff;text-align: center; background: #408aee;border-radius: 4px;" href="https://www.paypal.com/paypalme/cvvben">Paypal Me</a>
-
-## Contributors
-
-<a href="https://openomy.app/github/vbenjs/vue-vben-admin" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=vbenjs/vue-vben-admin&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
- </a>
-
-<a href="https://github.com/vbenjs/vue-vben-admin/graphs/contributors">
-  <img alt="Contributors" src="https://contrib.rocks/image?repo=vbenjs/vue-vben-admin" />
-</a>
-
-## Discord
-
-- [Github Discussions](https://github.com/anncwb/vue-vben-admin/discussions)
-
-## License
-
-[MIT © Vben-2020](./LICENSE)
+<div align="center">
+Made with ❤️ by Petzilla Team
+</div>
