@@ -11,8 +11,8 @@ export enum MerchantStatus {
  * 审核状态枚举
  */
 export enum AuditStatus {
-  PENDING = 0,
   APPROVED = 1,
+  PENDING = 0,
   REJECTED = 2,
 }
 

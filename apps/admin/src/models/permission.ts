@@ -2,9 +2,9 @@
  * 权限类型枚举
  */
 export enum PermissionType {
-  MENU = 'MENU',
-  BUTTON = 'BUTTON',
   API = 'API',
+  BUTTON = 'BUTTON',
+  MENU = 'MENU',
 }
 
 /**

@@ -68,7 +68,7 @@ SELECT 5, id FROM permissions WHERE code LIKE 'employee%' AND status = 1;
 
 -- 7. 创建超级管理员用户（密码: admin123）
 INSERT INTO users (username, email, password, user_type, status, real_name) VALUES
-('admin', 'admin@petzilla.com', '$2b$10$YQ7X.HrOZ8hZqJqCfKQVbeXGzTr4B3L8/WGm6fHnXJyJ9mQQO7YHO', 'ADMIN', 1, '系统管理员');
+('admin', 'admin@petzilla.com', '$2b$10$c3eloBk9xJtFN2.lQV4IVeuPFnsOvtkljTIxJuM5z1vg3KTxQt2Fe', 'ADMIN', 1, '系统管理员');
 
 -- 8. 为超级管理员分配角色
 INSERT INTO user_roles (user_id, role_id) VALUES (1, 1);
@@ -80,8 +80,8 @@ INSERT INTO merchants (name, code, status, contact_person, contact_phone, contac
 
 -- 10. 创建测试商户用户（密码: merchant123）
 INSERT INTO users (username, email, password, user_type, merchant_id, status, real_name) VALUES
-('merchant_a_owner', 'owner@merchant-a.com', '$2b$10$YQ7X.HrOZ8hZqJqCfKQVbeXGzTr4B3L8/WGm6fHnXJyJ9mQQO7YHO', 'MERCHANT', 1, 1, '商户A店长'),
-('merchant_b_owner', 'owner@merchant-b.com', '$2b$10$YQ7X.HrOZ8hZqJqCfKQVbeXGzTr4B3L8/WGm6fHnXJyJ9mQQO7YHO', 'MERCHANT', 2, 1, '商户B店长');
+('merchant_a_owner', 'owner@merchant-a.com', '$2b$10$jpqvP5ZA6bTv97qXWyX9Yubm/Dep0jFLv47ua8hLsHLevMUJonHkm', 'MERCHANT', 1, 1, '商户A店长'),
+('merchant_b_owner', 'owner@merchant-b.com', '$2b$10$jpqvP5ZA6bTv97qXWyX9Yubm/Dep0jFLv47ua8hLsHLevMUJonHkm', 'MERCHANT', 2, 1, '商户B店长');
 
 -- 11. 为商户用户分配角色
 INSERT INTO user_roles (user_id, role_id) VALUES

@@ -2,8 +2,8 @@
  * 角色类型枚举
  */
 export enum RoleType {
-  SYSTEM = 'SYSTEM',
   MERCHANT = 'MERCHANT',
+  SYSTEM = 'SYSTEM',
 }
 
 /**

@@ -6,29 +6,29 @@ dotenv.config();
 
 interface AppConfig {
   app: {
-    name: string;
     env: string;
+    name: string;
     port: number;
   };
   database: {
-    host: string;
-    port: number;
-    user: string;
-    password: string;
-    database: string;
     connectionLimit: number;
-    waitForConnections: boolean;
+    database: string;
+    host: string;
+    password: string;
+    port: number;
     queueLimit: number;
+    user: string;
+    waitForConnections: boolean;
   };
   redis: {
-    host: string;
-    port: number;
-    password: string;
     db: number;
+    host: string;
+    password: string;
+    port: number;
   };
   jwt: {
-    secret: string;
     expiresIn: string;
+    secret: string;
   };
   cors: {
     origin: string;

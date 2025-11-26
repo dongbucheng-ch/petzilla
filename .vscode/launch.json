@@ -3,6 +3,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "node",
+      "name": "Debug Admin Backend",
+      "request": "launch",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@petzilla/admin", "dev"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": { "NODE_ENV": "development" },
+      "sourceMaps": true,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "type": "chrome",
+      "name": "Debug Web Naive Frontend",
+      "request": "launch",
+      "url": "http://localhost:5555",
+      "env": { "NODE_ENV": "development" },
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}/apps/web-native"
+    },
+    {
       "type": "chrome",
       "name": "vben admin playground dev",
       "request": "launch",

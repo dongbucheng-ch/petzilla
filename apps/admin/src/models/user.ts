@@ -3,8 +3,8 @@
  */
 export enum UserType {
   ADMIN = 'ADMIN',
-  MERCHANT = 'MERCHANT',
   APP = 'APP',
+  MERCHANT = 'MERCHANT',
 }
 
 /**
@@ -19,9 +19,9 @@ export enum UserStatus {
  * 性别枚举
  */
 export enum Gender {
-  UNKNOWN = 0,
-  MALE = 1,
   FEMALE = 2,
+  MALE = 1,
+  UNKNOWN = 0,
 }
 
 /**

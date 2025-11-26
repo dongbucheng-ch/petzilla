@@ -8,20 +8,12 @@ import { authMiddleware } from '#/middlewares';
  * 路径前缀自动生成为: /admin/v1/auth
  */
 const authRoute: RouteHandler = (router) => {
-  // 公开路由（无需认证）
-  router.post('/login', (ctx) => authController.login(ctx));
-
-  // 需要认证的路由
-  router.post('/logout', authMiddleware, (ctx) => authController.logout(ctx));
-  router.post('/refresh', authMiddleware, (ctx) =>
-    authController.refreshToken(ctx),
-  );
-  router.get('/profile', authMiddleware, (ctx) =>
-    authController.getProfile(ctx),
-  );
-  router.post('/change-password', authMiddleware, (ctx) =>
-    authController.changePassword(ctx),
-  );
+  router
+    .post('/login', (ctx) => authController.login(ctx))
+    .post('/logout', authMiddleware, (ctx) => authController.logout(ctx))
+    .post('/refresh', authMiddleware, (ctx) => authController.refreshToken(ctx))
+    .get('/profile', authMiddleware, (ctx) => authController.getProfile(ctx))
+    .post('/change-password', authMiddleware, (ctx) => authController.changePassword(ctx));
 
   return router;
 };
