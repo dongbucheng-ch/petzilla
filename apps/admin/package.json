@@ -28,9 +28,11 @@
   "dependencies": {
     "@koa/cors": "catalog:",
     "@koa/router": "catalog:",
+    "bcrypt": "^6.0.0",
     "chalk": "catalog:",
     "dotenv": "catalog:",
     "ioredis": "catalog:",
+    "jsonwebtoken": "catalog:",
     "koa": "catalog:",
     "koa-body": "catalog:",
     "koa-helmet": "catalog:",
@@ -40,6 +42,8 @@
     "mysql2": "catalog:"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/jsonwebtoken": "catalog:",
     "@types/koa": "catalog:",
     "@types/koa-json": "catalog:",
     "@types/koa-logger": "catalog:",

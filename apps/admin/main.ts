@@ -1,6 +1,6 @@
 import process from 'node:process';
 
-import 'dotenv/config';
+import '#/config';
 
 const { default: app } = await import('#app');
 
